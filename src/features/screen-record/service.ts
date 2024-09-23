@@ -13,7 +13,14 @@ export class ScreenRecordService {
       executablePath:
         '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
       headless: true,
-      args: ['--start-fullscreen'],
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-infobars',
+        '--window-size=1280,720',
+        '--disable-web-security',
+        '--disable-gpu',
+      ],
     });
 
     const page = await browser.newPage();
