@@ -21,12 +21,7 @@ export class ScreenRecordService {
 
     const stream = await getStream(page, { audio: true, video: true });
 
-    const fileName = `raw/${uuidv4()}.webm`;
-    if (!fs.existsSync(fileName)) {
-      // Create the directory if it doesn't exist
-      fs.mkdirSync(fileName, { recursive: true });
-    }
-
+    const fileName = `videos/${uuidv4()}.webm`;
     const fileStream = fs.createWriteStream(fileName);
     stream.pipe(fileStream);
 
