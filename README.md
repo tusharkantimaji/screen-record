@@ -22,6 +22,15 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Problem Statement
+Build a software which will record the screen.
+Every time it will store the data in the file. If the process end, then it will generate a new file and store.
+In this way for one session we will have list of files. Then convert those file in mp4 formate and merge them into a single mp4 video.
+This will solve the interview screen record problem.
+
+User Node JS puppeteer-stream module for screen record.
+
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
