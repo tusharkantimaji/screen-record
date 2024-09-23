@@ -27,17 +27,13 @@ export class ScreenRecordService {
 
     this.sessionFiles.push(fileName);
 
-    return new Promise<void>((resolve) => {
-      stream.on('end', async () => {
-        console.log('Recording stopped');
+    return new Promise<void>(async (resolve) => {
+      setTimeout(async () => {
+        stream.destroy();
+        console.log('Stopping the recording...');
         fileStream.close();
         await browser.close();
         resolve();
-      });
-
-      setTimeout(() => {
-        stream.destroy();
-        console.log('Stopping the recording...');
       }, body.time);
     });
   }
