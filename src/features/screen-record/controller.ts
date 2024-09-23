@@ -6,7 +6,7 @@ export class ScreenRecordController {
   constructor(private readonly screenRecordService: ScreenRecordService) {}
 
   @Post('screen-record')
-  getHello(): Promise<void> {
+  screenRecording(): Promise<void> {
     return this.screenRecordService.startRecording();
   }
 }
