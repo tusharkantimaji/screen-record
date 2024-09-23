@@ -30,6 +30,15 @@ This will solve the interview screen record problem.
 
 User Node JS puppeteer-stream module for screen record.
 
+## Curl
+```
+curl --location 'http://localhost:3000/screen-record' \
+--header 'Content-Type: application/json' \
+--data '{
+    "url": "https://www.youtube.com/watch?v=G_yaHg-PQaI&ab_channel=IshanSharma",
+    "time": 5000
+}'
+```
 
 ## Description
 
